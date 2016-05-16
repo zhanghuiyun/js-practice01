@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>js练习</title>
+	<link rel="stylesheet" type="text/css" href="css/test3.css">
+</head>
+<body onload="nowTime()">
+    <form class="arrayIndex-location">
+        <label class="font-color">01:如果数组中存在 item，则返回元素在数组中的位置，否则返回 -1</label>
+    	<label for="entry-arr">请输入数组：</label>
+    	<input type="text" id="entry-arr" name="entry-arr" placeholder="数组之间用逗号分隔" required>
+        <label for="find-arr">请输入需要查找的数组元素：</label>
+        <input type="text" id="find-arr" name="find-arr" required>
+        <input type="submit" value="查询" class="btn" id="query-btn" onclick="find('entry-arr', 'find-arr');">
+    </form>
+    
+    <form class="arr-sum">
+        <label class="font-color">02： 计算给定数组 arr 中所有元素的总和</label>
+        <label for="enter-arr">请输入数组：</label>
+        <input type="text" id="enter-arr" name="enter-arr" placeholder="数组之间用逗号分隔">
+        <input type="submit" value="计算" id="sum-btn" class="btn" onclick="sum('enter-arr');">
+    </form>
+    
+    <form class="arr-count">
+        <label class="font-color">03： 统计数组 arr 中值等于 item 的元素出现的次数</label>
+        <label for="input-arr">请输入数组：</label>
+        <input type="text" id="input-arr" name="input-arr" placeholder="数组之间用逗号分隔" required>
+        <label for="count-item">请输入需要统计的数组元素：</label>
+        <input type="text" id="count-item" name="count-arr" required>
+        <input type="submit" value="统计" id="count-btn" class="btn" onclick="count('input-arr','count-item');">
+    </form>
+    
+    <div class="setTime">
+    <p class="font-color">04: 在页面显示当前时间，精确到秒数，且不断变化</p>
+    <table border="1px">
+        <tr>
+            <td>年-月-日</td>
+            <td id="date"></td>
+        </tr>
+        <tr>
+            <td>时:秒:分</td>
+            <td id="time"></td>
+        </tr>
+        <tr>
+            <td>星期</td>
+            <td id="week"></td>
+        </tr>
+    </table>
+    </div>
+    <script type="text/javascript" src="test3.js"></script>
+</body>
+</html>
